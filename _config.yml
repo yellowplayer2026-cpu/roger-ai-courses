@@ -1,1 +1,17 @@
-     1|\n     2|title: Roger AI Courses - AI秘書長實戰\n     3|email: yellowplayer2026@gmail.com\n     4|description: >-\n     5|  羅志傑老師的 AI 課程與知識行銷平台，專注於 AI-SG 框架、AEDDI 模型，助您成為 AI 時代的智能顧問。\n     6|baseurl: "/roger-ai-courses"\nshow_excerpts: true\nlang: zh-TW\n     7|url: "https://yellowplayer2026-cpu.github.io"\n     8|twitter_username: yellowplayer2026-cpu\n     9|github_username: yellowplayer2026-cpu\n    10|\n    11|# Build settings\n    12|theme: minima\n    13|plugins:\n    14|  - jekyll-feed\n    15|  - jekyll-remote-theme\n    16|
+title: Roger AI Courses - AI秘書長實戰
+email: yellowplayer2026@gmail.com
+description: >-
+  羅志傑老師的 AI 課程與知識行銷平台，專注於 AI-SG 框架、AEDDI 模型，助您成為 AI 時代的智能顧問。
+baseurl: "/roger-ai-courses"
+url: "https://yellowplayer2026-cpu.github.io"
+twitter_username: yellowplayer2026-cpu
+github_username: yellowplayer2026-cpu
+
+show_excerpts: true
+lang: zh-TW
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
