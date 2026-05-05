@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <h1>{{ site.title | escape }}</h1>
+  <p>{{ site.description | escape }}</p>
+</div>
+
+{% assign featured = site.posts | where_exp: "p", "p.image" | first %}
+{% if featured %}
+  <div class="callout">
+    <strong>Featured：</strong>
+    <a href="{{ featured.url | relative_url }}">{{ featured.title }}</a>
+    <div style="color:var(--muted); font-size:14px; margin-top:6px;">
+      {{ featured.excerpt | strip_html | truncate: 120 }}
+    </div>
+  </div>
+{% endif %}
+
+<div class="card-grid">
+  {% for post in site.posts %}
+    <article class="card">
+      <a href="{{ post.url | relative_url }}" style="text-decoration:none; color:inherit;">
+        <div class="thumb">
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" alt="" style="max-height:120px; width:auto;" />
+          {% else %}
+            <span style="color:var(--muted); font-size:12px;">No image</span>
+          {% endif %}
+        </div>
+        <div class="body">
+          <div class="kicker">{{ post.date | date: "%Y-%m-%d" }}</div>
+          <h3 class="title">{{ post.title }}</h3>
+          <p class="excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</p>
+        </div>
+      </a>
+    </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,88 @@
+---
+---
+
+:root{
+  --brand: #1f4ed8;
+  --ink: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+}
+
+/* Minima loads its own CSS; this file overrides it */
+
+body{
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.site-header, .site-footer{
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(6px);
+}
+
+a{ color: var(--brand); }
+
+/* --- Homepage hero --- */
+.hero{
+  margin: 1.25rem 0 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: radial-gradient(800px 200px at 20% 0%, rgba(31,78,216,.12), transparent 60%),
+              linear-gradient(180deg, #ffffff, #f5f7ff);
+}
+.hero h1{ margin: 0 0 .5rem; letter-spacing: -0.02em; }
+.hero p{ margin: 0; color: var(--muted); }
+
+/* --- Card grid --- */
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.card{
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.card:hover{
+  transform: translateY(-2px);
+  box_shadow: 0 8px 24px rgba(17,24,39,.08);
+}
+.card .thumb{
+  height: 140px;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  display:flex; align-items:center; justify-content:center;
+}
+.card .body{ padding: 14px 14px 16px; }
+.card .kicker{ font-size: 12px; color: var(--muted); }
+.card .title{ margin: 6px 0 0; font-weight: 700; }
+.card .excerpt{ margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+
+/* --- Post header image --- */
+.post-hero{
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  margin: 12px 0 18px;
+}
+.post-hero img{ display:block; width:100%; height:auto; }
+
+/* --- Callouts --- */
+.callout{
+  border-left: 4px solid var(--brand);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-left-width: 4px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+.callout strong{ color: var(--ink); }
